@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <title>Client</title>
+  </head>
+  <body>
+    <label for="input">Input:</label>
+    <input type="text" id="input" />
+    <button id="send">Send</button>
+    <div id="output"></div>
+  </body>
+  <script>
+    const socket = new WebSocket('wss://echo.websocket.org');
+    const input = document.getElementById('input');
+    const send = document.getElementById('send');
+    const output = document.getElementById('output');
+
+    send.addEventListener('click', () => {
+      socket.send(input.value);
+    });
+
+    socket.onmessage = (event) => {
+      const p = document.createElement('p');
+      p.textContent = event.data;
+      output.appendChild(p);
+    };
+  </script>
+</html>

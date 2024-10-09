@@ -1,0 +1,22 @@
+{
+  "name": "playwright-web-socket-route-example",
+  "version": "0.0.1",
+  "description": "PlaywrightのWebSocketRouteのサンプル",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "client": "vite",
+    "test": "playwright test"
+  },
+  "keywords": [],
+  "author": "sublimer <sublimer.me@gmail.com> (https://sublimer.me/)",
+  "license": "MIT",
+  "dependencies": {
+    "playwright": "^1.48.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.48.0",
+    "@types/node": "^22.7.5",
+    "vite": "^5.4.8"
+  }
+}
